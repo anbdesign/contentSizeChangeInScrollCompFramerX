@@ -526,7 +526,7 @@
                 {
                   "enabled" : true,
                   "type" : "componentinstance",
-                  "value" : "DnGHuTyxL"
+                  "value" : "xh5VzqS_A"
                 }
               ],
               "direction" : "vertical",
@@ -570,67 +570,6 @@
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
             "right" : null,
-            "rotation" : 0,
-            "top" : 45,
-            "visible" : true,
-            "width" : 300,
-            "widthType" : 0
-          },
-          {
-            "__class" : "CodeComponentNode",
-            "aspectRatio" : null,
-            "bottom" : null,
-            "centerAnchorX" : 0.79745370370370372,
-            "centerAnchorY" : 0.33839779005524862,
-            "children" : [
-
-            ],
-            "clip" : true,
-            "codeComponentIdentifier" : ".\/dynamicList.tsx__dynamicList",
-            "codeComponentProps" : {
-              "text" : "Hello World!"
-            },
-            "codeOverrideEnabled" : true,
-            "codeOverrideFile" : ".\/dynamicList.tsx",
-            "codeOverrideIdentifier" : ".\/dynamicList.tsx_updateNumOfCards",
-            "codeOverrideName" : "updateNumOfCards",
-            "constraintsLocked" : false,
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
-            "fillImage" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillType" : "color",
-            "height" : 400,
-            "heightType" : 0,
-            "id" : "DnGHuTyxL",
-            "intrinsicHeight" : 400,
-            "intrinsicWidth" : 300,
-            "left" : null,
-            "locked" : false,
-            "name" : null,
-            "opacity" : 1,
-            "originalid" : null,
-            "parentid" : "pCZiej9zj",
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "right" : 25,
             "rotation" : 0,
             "top" : 45,
             "visible" : true,
@@ -1123,6 +1062,67 @@
             "widthType" : 0,
             "x" : 303,
             "y" : 370
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.80555555555555558,
+            "centerAnchorY" : 0.33839779005524862,
+            "children" : [
+
+            ],
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/dynamicList.tsx__dynamicList",
+            "codeComponentProps" : {
+
+            },
+            "codeOverrideEnabled" : true,
+            "codeOverrideFile" : ".\/dynamicList.tsx",
+            "codeOverrideIdentifier" : ".\/dynamicList.tsx_updateNumOfCards",
+            "codeOverrideName" : "updateNumOfCards",
+            "constraintsLocked" : false,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 0,
+              "end" : "rgba(0,0,0,0)",
+              "start" : "black"
+            },
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 400,
+            "heightType" : 0,
+            "id" : "xh5VzqS_A",
+            "intrinsicHeight" : 400,
+            "intrinsicWidth" : 300,
+            "left" : null,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "pCZiej9zj",
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 18,
+            "rotation" : 0,
+            "top" : 45,
+            "visible" : true,
+            "width" : 300,
+            "widthType" : 0
           }
         ],
         "clip" : true,
