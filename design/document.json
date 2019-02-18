@@ -114,9 +114,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 95,
-                "widthType" : 0,
-                "x" : 110,
-                "y" : 115
+                "widthType" : 0
               }
             ],
             "clip" : false,
@@ -280,9 +278,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 95,
-                "widthType" : 0,
-                "x" : 110,
-                "y" : 115
+                "widthType" : 0
               }
             ],
             "clip" : false,
@@ -446,9 +442,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 87,
-                "widthType" : 0,
-                "x" : 110,
-                "y" : 115
+                "widthType" : 0
               }
             ],
             "clip" : false,
@@ -664,9 +658,7 @@
             "top" : 276,
             "visible" : true,
             "width" : 127,
-            "widthType" : 0,
-            "x" : 303,
-            "y" : 370
+            "widthType" : 0
           },
           {
             "__class" : "TextNode",
@@ -740,6 +732,15 @@
                   "type" : "unstyled"
                 }
               ],
+              "cached" : {
+                "html" : "<div data-offset-key=\"46gsv-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"46gsv-0-0\" style=\"tab-size:4;font-weight:400;font-family:&quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:#000000;font-size:16px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">Scroll Component ——&gt;<\/span><\/span><\/div>",
+                "os" : "10_13",
+                "size" : {
+                  "height" : 19,
+                  "width" : 177
+                },
+                "width" : 0
+              },
               "entityMap" : {
 
               }
@@ -747,9 +748,7 @@
             "top" : 123,
             "visible" : true,
             "width" : 177,
-            "widthType" : 0,
-            "x" : 303,
-            "y" : 370
+            "widthType" : 0
           },
           {
             "__class" : "TextNode",
@@ -875,9 +874,7 @@
             "top" : 276,
             "visible" : true,
             "width" : 129,
-            "widthType" : 0,
-            "x" : 303,
-            "y" : 370
+            "widthType" : 0
           },
           {
             "__class" : "TextNode",
@@ -967,9 +964,7 @@
             "top" : 345,
             "visible" : true,
             "width" : 127,
-            "widthType" : 0,
-            "x" : 303,
-            "y" : 370
+            "widthType" : 0
           },
           {
             "__class" : "TextNode",
@@ -1059,9 +1054,7 @@
             "top" : null,
             "visible" : true,
             "width" : 127,
-            "widthType" : 0,
-            "x" : 303,
-            "y" : 370
+            "widthType" : 0
           },
           {
             "__class" : "CodeComponentNode",
@@ -1286,9 +1279,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 100,
-                "widthType" : 0,
-                "x" : 55,
-                "y" : 47
+                "widthType" : 0
               }
             ],
             "clip" : false,
