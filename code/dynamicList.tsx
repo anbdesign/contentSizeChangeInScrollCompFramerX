@@ -1,5 +1,5 @@
 import * as React from "react";
-import { PropertyControls, ControlType, Frame, Stack, Data, Animatable, Override } from "framer";
+import { PropertyControls, ControlType, Frame, Stack, Data, Animatable, Override, Color } from "framer";
 
 import {M_card} from "./canvas"
 
@@ -34,6 +34,21 @@ export const dataObjectOfOne: Override = () => {
       },
   }
 }
+
+
+export const dataObjectOfThree: Override = () => {
+  return {
+      onTap() {
+        data.dataObjectfromAPI = [
+          'card 01',
+          'card 02',
+          'card 03',
+        ]
+        console.log(data.dataObjectfromAPI)
+      },
+  }
+}
+
 
 
 export const dataObjectOfSeven: Override = () => {
@@ -95,7 +110,7 @@ export class _dynamicList extends React.Component<Props> {
     // </Frame>
 
     <Frame name={'wrapper'} height={100* this.props.dataObjectfromAPI.length} width={300}>
-        <Stack width={'100%'} height={'100%'} distribution={'start'} align={'center'} direction={'vertical'} gap={2} padding={0}>
+        <Stack width={'100%'} height={'100%'} distribution={'start'} align={'center'} direction={'vertical'} gap={0} padding={0}>
             {this.cardArray}
         </Stack>
     </Frame>
@@ -107,12 +122,18 @@ export class _dynamicList extends React.Component<Props> {
       console.log('create cards')
       console.log(this.props.dataObjectfromAPI)
       console.log('^ props.dataObjectfromAPI')
+
+      var starterColor = Color('#55CCFF')
+
+
       this.cardArray = []
       for (let index = 0; index < this.props.dataObjectfromAPI.length; index++) {
         const element = this.props.dataObjectfromAPI[index];
+        const newColor = Color.darken(starterColor, 6 * index)
+
         console.log(element)       
         this.cardArray.push(
-          <M_card background={'red'} Card_Text={element} height={100} width={300} key={'card'+index}></M_card>
+          <M_card background={newColor} Card_Text={element} height={100} width={300} key={'card'+index}></M_card>
         )        
       }
       console.log(this.cardArray)
