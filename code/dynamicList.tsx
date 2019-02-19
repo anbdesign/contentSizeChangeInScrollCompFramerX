@@ -10,16 +10,23 @@ export const data = Data({
     'card 02',
     'card 03',
     'card 04',
-  ]
+  ],
+  cardheight: 100 * 4,
 })
 
 
 
 export const updateNumOfCards: Override = () => {
   // console.log(data.dataObjectfromAPI)
+  // now try passing the new height
+  // console.log(data.cardheight)
+  console.log(100 * data.dataObjectfromAPI.length)
+
+  let newHeight = 100 * data.dataObjectfromAPI.length
 
   return {
     dataObjectfromAPI: data.dataObjectfromAPI,
+    height: newHeight
   }
 }
 
@@ -115,7 +122,8 @@ export class _dynamicList extends React.Component<Props> {
 
   static defaultProps: Props = {
     dataObjectfromAPI: data.dataObjectfromAPI,
-    height: (100 * data.dataObjectfromAPI.length),
+    // height: (100 * data.dataObjectfromAPI.length),
+    height: (data.cardheight),
     width: 300,
   };
 

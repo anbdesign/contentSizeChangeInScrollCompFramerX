@@ -1061,7 +1061,7 @@
             "aspectRatio" : null,
             "bottom" : null,
             "centerAnchorX" : 0.80555555555555558,
-            "centerAnchorY" : 0.33839779005524862,
+            "centerAnchorY" : 0.38259668508287292,
             "children" : [
 
             ],
@@ -1092,7 +1092,7 @@
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
             "fillType" : "color",
-            "height" : 400,
+            "height" : 464,
             "heightType" : 0,
             "id" : "xh5VzqS_A",
             "intrinsicHeight" : 400,
@@ -1125,7 +1125,7 @@
         "exportOptions" : [
 
         ],
-        "fillColor" : "rgba(255,255,255,1)",
+        "fillColor" : "#333333",
         "fillEnabled" : true,
         "fillGradient" : {
           "__class" : "LinearGradient",
