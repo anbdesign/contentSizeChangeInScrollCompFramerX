@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <script src="build/react.development.js"></script>
+        <script src="build/react-dom.development.js"></script>
+        <script src="build/framer.js"></script>
+
+        <link href="build/Draft.css" rel="stylesheet" />
+        <link href="build/style.css" rel="stylesheet" />
+
+        <!-- Workaround for a WebKit bug: loading via URL from the stylesheet is denied if this file is loaded via file:/// -->
+        <style>
+            @font-face {
+                font-family: "Roboto Mono";
+                font-style: normal;
+                font-weight: 400;
+                src: local("Roboto Mono"), local("RobotoMono-Regular"),
+                    url("fonts/RobotoMono-Regular.ttf") format("truetype");
+            }
+        </style>
+        <style>
+            * {
+                -webkit-font-smoothing: antialiased;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main></main>
+        <script src="build/standalone.js"></script>
+        
+        <script id="build_index_js">
+        (function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("framer"), require("react"));
+	else if(typeof define === 'function' && define.amd)
+		define(["framer", "react"], factory);
+	else {
+		var a = typeof exports === 'object' ? factory(require("framer"), require("react")) : factory(root["Framer"], root["React"]);
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(window, function(__WEBPACK_EXTERNAL_MODULE_framer__, __WEBPACK_EXTERNAL_MODULE_react__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		try { modules[moduleId].call(module.exports, module, module.exports, __webpack_require__); } catch (error) { module.exports = { error } }
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// asset url
+/******/ 	var __module_i = eval("typeof module !== 'undefined' ? module.i : ''");
+/******/ 	var __framer_package = (/(node_modules[/].*)[/](build|dist).index.js/.exec(__module_i) || [])[1]
+/******/ 	function __asset_url__(src) { return __WEBPACK_EXTERNAL_MODULE_framer__.serverURL(__framer_package, src) };
+/******/ 	installedModules['framer/resource'] = { i: 'framer/resource', l: true, exports: { url: __asset_url__ } };
+/******/
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./package.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./code sync recursive \\.(t|j)s(x?)|\\.css$":
+/*!***************************************!*\
+  !*** ./code sync \.(t|j)s(x?)|\.css$ ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./Examples.tsx": "./code/Examples.tsx",
+	"./canvas.tsx": "./code/canvas.tsx",
+	"./dynamicList.tsx": "./code/dynamicList.tsx"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	var module = __webpack_require__(id);
+	return module;
+}
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error('Cannot find module "' + req + '".');
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./code sync recursive \\.(t|j)s(x?)|\\.css$";
+
+/***/ }),
+
+/***/ "./code/Examples.tsx":
+/*!***************************!*\
+  !*** ./code/Examples.tsx ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst framer_1 = __webpack_require__(/*! framer */ \"framer\");\nconst data = framer_1.Data({ toggle: true, scale: framer_1.Animatable(1), opacity: framer_1.Animatable(1), rotation: framer_1.Animatable(0), rotationY: framer_1.Animatable(0) });\nexports.Scale = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        scale: data.scale,\n        onTap() {\n            window[\"__checkBudget__\"]();\n            data.scale.set(0.6);\n            framer_1.animate.spring(data.scale, 1);\n        },\n    };\n};\nexports.Rotate = props => {\n    window[\"__checkBudget__\"]();\n    data.rotation.set(props.rotation);\n    return {\n        rotation: data.rotation,\n        onTap() {\n            window[\"__checkBudget__\"]();\n            framer_1.animate.spring(data.rotation, data.rotation.get() + 90, {\n                tension: 250,\n                friction: 20,\n            });\n        },\n    };\n};\nexports.Fade = props => {\n    window[\"__checkBudget__\"]();\n    data.opacity.set(props.opacity);\n    return {\n        opacity: data.opacity,\n        onTap() {\n            window[\"__checkBudget__\"]();\n            framer_1.animate.linear(data.opacity, 0, 0.2);\n        },\n    };\n};\nexports.FlipOutput = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        rotationY: data.rotationY,\n    };\n};\nexports.FlipInput = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            const toggle = data.toggle;\n            framer_1.animate.spring({ rotationY: data.rotationY }, {\n                rotationY: toggle ? 360 : 0,\n            }, { tension: 200, friction: 20 });\n            data.toggle = !toggle;\n        },\n    };\n};\nexports.__info__ = [{ name: \"Scale\", type: \"override\" }, { name: \"Rotate\", type: \"override\" }, { name: \"Fade\", type: \"override\" }, { name: \"FlipOutput\", type: \"override\" }, { name: \"FlipInput\", type: \"override\" }];\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb2RlL0V4YW1wbGVzLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLDhDQUE4QyxjQUFjO0FBQzVEO0FBQ0EsNEJBQTRCLG9KQUFvSjtBQUNoTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsU0FBUztBQUNUO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGFBQWE7QUFDYixTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHFDQUFxQyw0QkFBNEI7QUFDakU7QUFDQSxhQUFhLEdBQUcsNkJBQTZCO0FBQzdDO0FBQ0EsU0FBUztBQUNUO0FBQ0E7QUFDQSxxQkFBcUIsa0NBQWtDLEdBQUcsbUNBQW1DLEdBQUcsaUNBQWlDLEdBQUcsdUNBQXVDLEdBQUcsc0NBQXNDIiwiZmlsZSI6Ii4vY29kZS9FeGFtcGxlcy50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwgeyB2YWx1ZTogdHJ1ZSB9KTtcbmNvbnN0IGZyYW1lcl8xID0gcmVxdWlyZShcImZyYW1lclwiKTtcbmNvbnN0IGRhdGEgPSBmcmFtZXJfMS5EYXRhKHsgdG9nZ2xlOiB0cnVlLCBzY2FsZTogZnJhbWVyXzEuQW5pbWF0YWJsZSgxKSwgb3BhY2l0eTogZnJhbWVyXzEuQW5pbWF0YWJsZSgxKSwgcm90YXRpb246IGZyYW1lcl8xLkFuaW1hdGFibGUoMCksIHJvdGF0aW9uWTogZnJhbWVyXzEuQW5pbWF0YWJsZSgwKSB9KTtcbmV4cG9ydHMuU2NhbGUgPSAoKSA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgc2NhbGU6IGRhdGEuc2NhbGUsXG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBkYXRhLnNjYWxlLnNldCgwLjYpO1xuICAgICAgICAgICAgZnJhbWVyXzEuYW5pbWF0ZS5zcHJpbmcoZGF0YS5zY2FsZSwgMSk7XG4gICAgICAgIH0sXG4gICAgfTtcbn07XG5leHBvcnRzLlJvdGF0ZSA9IHByb3BzID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICBkYXRhLnJvdGF0aW9uLnNldChwcm9wcy5yb3RhdGlvbik7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgcm90YXRpb246IGRhdGEucm90YXRpb24sXG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBmcmFtZXJfMS5hbmltYXRlLnNwcmluZyhkYXRhLnJvdGF0aW9uLCBkYXRhLnJvdGF0aW9uLmdldCgpICsgOTAsIHtcbiAgICAgICAgICAgICAgICB0ZW5zaW9uOiAyNTAsXG4gICAgICAgICAgICAgICAgZnJpY3Rpb246IDIwLFxuICAgICAgICAgICAgfSk7XG4gICAgICAgIH0sXG4gICAgfTtcbn07XG5leHBvcnRzLkZhZGUgPSBwcm9wcyA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgZGF0YS5vcGFjaXR5LnNldChwcm9wcy5vcGFjaXR5KTtcbiAgICByZXR1cm4ge1xuICAgICAgICBvcGFjaXR5OiBkYXRhLm9wYWNpdHksXG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBmcmFtZXJfMS5hbmltYXRlLmxpbmVhcihkYXRhLm9wYWNpdHksIDAsIDAuMik7XG4gICAgICAgIH0sXG4gICAgfTtcbn07XG5leHBvcnRzLkZsaXBPdXRwdXQgPSAoKSA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgcm90YXRpb25ZOiBkYXRhLnJvdGF0aW9uWSxcbiAgICB9O1xufTtcbmV4cG9ydHMuRmxpcElucHV0ID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBjb25zdCB0b2dnbGUgPSBkYXRhLnRvZ2dsZTtcbiAgICAgICAgICAgIGZyYW1lcl8xLmFuaW1hdGUuc3ByaW5nKHsgcm90YXRpb25ZOiBkYXRhLnJvdGF0aW9uWSB9LCB7XG4gICAgICAgICAgICAgICAgcm90YXRpb25ZOiB0b2dnbGUgPyAzNjAgOiAwLFxuICAgICAgICAgICAgfSwgeyB0ZW5zaW9uOiAyMDAsIGZyaWN0aW9uOiAyMCB9KTtcbiAgICAgICAgICAgIGRhdGEudG9nZ2xlID0gIXRvZ2dsZTtcbiAgICAgICAgfSxcbiAgICB9O1xufTtcbmV4cG9ydHMuX19pbmZvX18gPSBbeyBuYW1lOiBcIlNjYWxlXCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9LCB7IG5hbWU6IFwiUm90YXRlXCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9LCB7IG5hbWU6IFwiRmFkZVwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcIkZsaXBPdXRwdXRcIiwgdHlwZTogXCJvdmVycmlkZVwiIH0sIHsgbmFtZTogXCJGbGlwSW5wdXRcIiwgdHlwZTogXCJvdmVycmlkZVwiIH1dO1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./code/Examples.tsx\n");
+
+/***/ }),
+
+/***/ "./code/canvas.tsx":
+/*!*************************!*\
+  !*** ./code/canvas.tsx ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+// WARNING: this file is auto generated, any changes will be lost
+const framer_1 = __webpack_require__(/*! framer */ "framer");
+const canvas = framer_1.CanvasStore.shared({"children":[{"componentClass":"Frame","props":{"key":"xXpYyKBXF","id":"id_xXpYyKBXF","willChangeTransform":false,"opacity":1,"radius":0,"rotation":0,"visible":true,"overflow":"visible","background":{"r":85,"g":204,"b":255,"a":1,"h":197.99999999999997,"s":1,"l":0.6666666666666666,"initialValue":"#55CCFF","roundA":1,"format":"rgb"},"left":0,"right":0,"top":0,"bottom":0,"width":286,"height":100,"aspectRatio":null,"centerX":"19.09722222222222%","centerY":"12.845303867403315%","parentSize":null},"children":[{"componentClass":"Text","props":{"key":"vcF3m6TsA","id":"id_vcF3m6TsA","willChangeTransform":false,"opacity":1,"rotation":0,"visible":true,"autoSize":true,"size":{"height":28,"width":100},"rawHTML":"<div data-offset-key=\"485p-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"485p-0-0\" style=\"tab-size:4;font-weight:200;font-family:&quot;HelveticaNeue-LightItalic&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:#FFFFFF;font-size:24px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">Card Text</span></span></div>","left":43,"right":null,"top":null,"bottom":null,"width":100,"height":28,"aspectRatio":null,"centerX":"32.51748251748251%","centerY":"50%","parentSize":null},"name":"Card_Text"}],"name":"M_card"}]});
+exports.M_card = framer_1.createDesignComponent(canvas, "id_xXpYyKBXF", { Card_Text: "string" }, 286, 100);
+exports.__info__ = [];
+
+
+/***/ }),
+
+/***/ "./code/dynamicList.tsx":
+/*!******************************!*\
+  !*** ./code/dynamicList.tsx ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst React = __webpack_require__(/*! react */ \"react\");\nconst framer_1 = __webpack_require__(/*! framer */ \"framer\");\nconst canvas_1 = __webpack_require__(/*! ./canvas */ \"./code/canvas.tsx\");\nexports.data = framer_1.Data({\n    numberOfCards: framer_1.Animatable(1),\n    dataObjectfromAPI: [\n        'card 01',\n        'card 02',\n        'card 03',\n        'card 04',\n    ],\n    cardheight: 100 * 4,\n});\nexports.updateNumOfCards = () => {\n    window[\"__checkBudget__\"]();\n    // console.log(data.dataObjectfromAPI)\n    // now try passing the new height\n    // console.log(data.cardheight)\n    console.log(100 * exports.data.dataObjectfromAPI.length);\n    let newHeight = 100 * exports.data.dataObjectfromAPI.length;\n    return {\n        dataObjectfromAPI: exports.data.dataObjectfromAPI,\n        transform: `translate(0px, 0px)`,\n    };\n};\nexports.dataObjectOfOne = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            exports.data.dataObjectfromAPI = ['card 01'];\n        },\n    };\n};\nexports.dataObjectOfThree = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            exports.data.dataObjectfromAPI = [\n                'card 01',\n                'card 02',\n                'card 03',\n            ];\n        },\n    };\n};\nexports.dataObjectOfSeven = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            exports.data.dataObjectfromAPI = [\n                'card 01',\n                'card 02',\n                'card 03',\n                'card 04',\n                'card 05',\n                'card 06',\n                'card 07',\n            ];\n        },\n    };\n};\nexports.scrollSessionStart = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onScrollSessionStart() {\n            window[\"__checkBudget__\"]();\n            console.log('scroll session start');\n        },\n    };\n};\nconst scrollStyles = {\n    transform: `translate(0px, 0px)`\n};\n// ScrollProps \nclass _dynamicList extends React.Component {\n    constructor() {\n        // constructor(props) {\n        //   super(props);\n        //   this.state        = {\n        //     height: 400,\n        //     width: 50,\n        //   } ;\n        //   this.handleChange = this.handleChange.bind(this);\n        // }\n        super(...arguments);\n        this.cardArray = [];\n        this.scrollProps = {\n            width: this.props.width,\n            height: this.props.height,\n            overflow: 'hidden'\n        };\n    }\n    handleChange() {\n        window[\"__checkBudget__\"]();\n        console.log('handle change');\n    }\n    render() {\n        window[\"__checkBudget__\"]();\n        console.log('re-render dynamic list');\n        this.createCards();\n        // console.log(this.cardArray)\n        // borderWidth={this.props.dataObjectfromAPI.length}\n        // contentOffsetY={this.props.dataObjectfromAPI.length/1000}\n        return (React.createElement(framer_1.Scroll, { borderColor: 'yellow', width: this.props.width, height: this.props.height, contentOffsetY: this.props.dataObjectfromAPI.length / 1000, overflow: 'hidden' },\n            React.createElement(framer_1.Frame, { style: scrollStyles, name: 'wrapper', height: 100 * this.props.dataObjectfromAPI.length, width: 300 },\n                React.createElement(framer_1.Stack, { width: '100%', height: '100%', distribution: 'start', align: 'center', direction: 'vertical', gap: 0, padding: 0 }, this.cardArray))));\n    }\n    createCards() {\n        window[\"__checkBudget__\"]();\n        var starterColor = framer_1.Color('#55CCFF');\n        this.cardArray = [];\n        for (let index = 0; index < this.props.dataObjectfromAPI.length; index++) {\n            window[\"__checkBudget__\"]();\n            const element = this.props.dataObjectfromAPI[index];\n            const newColor = framer_1.Color.darken(starterColor, 6 * index);\n            this.cardArray.push(React.createElement(canvas_1.M_card, { background: newColor, Card_Text: element, height: 100, width: 300, key: 'card' + index }));\n        }\n    }\n    componentDidMount() {\n        window[\"__checkBudget__\"]();\n        console.log('mount');\n    }\n    componentWillUnmount() {\n        window[\"__checkBudget__\"]();\n        console.log('unmount');\n    }\n}\n_dynamicList.defaultProps = {\n    dataObjectfromAPI: exports.data.dataObjectfromAPI,\n    // height: (100 * data.dataObjectfromAPI.length),\n    height: exports.data.cardheight,\n    width: 300,\n};\n// Add Framer UI for this component (in the properties panel)\n// https://framer.com/learn/docs/components#code\n_dynamicList.propertyControls = {\n// text: { type: ControlType.String, title: \"Text\" },\n};\nexports._dynamicList = _dynamicList;\nexports.__info__ = [{ name: \"updateNumOfCards\", type: \"override\" }, { name: \"dataObjectOfOne\", type: \"override\" }, { name: \"dataObjectOfThree\", type: \"override\" }, { name: \"dataObjectOfSeven\", type: \"override\" }, { name: \"scrollSessionStart\", type: \"override\" }, { name: \"_dynamicList\", children: false, type: \"component\" }];\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb2RlL2R5bmFtaWNMaXN0LnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLDhDQUE4QyxjQUFjO0FBQzVEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLENBQUM7QUFDRDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsU0FBUztBQUNUO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsU0FBUztBQUNUO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxjQUFjO0FBQ2Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSx3QkFBd0I7QUFDeEIsMkJBQTJCO0FBQzNCLHNEQUFzRCw0SkFBNEo7QUFDbE4saURBQWlELHNHQUFzRztBQUN2SixxREFBcUQsbUhBQW1IO0FBQ3hLO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSwyQkFBMkIsNkNBQTZDO0FBQ3hFO0FBQ0E7QUFDQTtBQUNBLHNFQUFzRSx5RkFBeUY7QUFDL0o7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFVBQVUsMENBQTBDO0FBQ3BEO0FBQ0E7QUFDQSxxQkFBcUIsNkNBQTZDLEdBQUcsNENBQTRDLEdBQUcsOENBQThDLEdBQUcsOENBQThDLEdBQUcsK0NBQStDLEdBQUcsMkRBQTJEIiwiZmlsZSI6Ii4vY29kZS9keW5hbWljTGlzdC50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwgeyB2YWx1ZTogdHJ1ZSB9KTtcbmNvbnN0IFJlYWN0ID0gcmVxdWlyZShcInJlYWN0XCIpO1xuY29uc3QgZnJhbWVyXzEgPSByZXF1aXJlKFwiZnJhbWVyXCIpO1xuY29uc3QgY2FudmFzXzEgPSByZXF1aXJlKFwiLi9jYW52YXNcIik7XG5leHBvcnRzLmRhdGEgPSBmcmFtZXJfMS5EYXRhKHtcbiAgICBudW1iZXJPZkNhcmRzOiBmcmFtZXJfMS5BbmltYXRhYmxlKDEpLFxuICAgIGRhdGFPYmplY3Rmcm9tQVBJOiBbXG4gICAgICAgICdjYXJkIDAxJyxcbiAgICAgICAgJ2NhcmQgMDInLFxuICAgICAgICAnY2FyZCAwMycsXG4gICAgICAgICdjYXJkIDA0JyxcbiAgICBdLFxuICAgIGNhcmRoZWlnaHQ6IDEwMCAqIDQsXG59KTtcbmV4cG9ydHMudXBkYXRlTnVtT2ZDYXJkcyA9ICgpID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICAvLyBjb25zb2xlLmxvZyhkYXRhLmRhdGFPYmplY3Rmcm9tQVBJKVxuICAgIC8vIG5vdyB0cnkgcGFzc2luZyB0aGUgbmV3IGhlaWdodFxuICAgIC8vIGNvbnNvbGUubG9nKGRhdGEuY2FyZGhlaWdodClcbiAgICBjb25zb2xlLmxvZygxMDAgKiBleHBvcnRzLmRhdGEuZGF0YU9iamVjdGZyb21BUEkubGVuZ3RoKTtcbiAgICBsZXQgbmV3SGVpZ2h0ID0gMTAwICogZXhwb3J0cy5kYXRhLmRhdGFPYmplY3Rmcm9tQVBJLmxlbmd0aDtcbiAgICByZXR1cm4ge1xuICAgICAgICBkYXRhT2JqZWN0ZnJvbUFQSTogZXhwb3J0cy5kYXRhLmRhdGFPYmplY3Rmcm9tQVBJLFxuICAgICAgICB0cmFuc2Zvcm06IGB0cmFuc2xhdGUoMHB4LCAwcHgpYCxcbiAgICB9O1xufTtcbmV4cG9ydHMuZGF0YU9iamVjdE9mT25lID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBleHBvcnRzLmRhdGEuZGF0YU9iamVjdGZyb21BUEkgPSBbJ2NhcmQgMDEnXTtcbiAgICAgICAgfSxcbiAgICB9O1xufTtcbmV4cG9ydHMuZGF0YU9iamVjdE9mVGhyZWUgPSAoKSA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgb25UYXAoKSB7XG4gICAgICAgICAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICAgICAgICAgIGV4cG9ydHMuZGF0YS5kYXRhT2JqZWN0ZnJvbUFQSSA9IFtcbiAgICAgICAgICAgICAgICAnY2FyZCAwMScsXG4gICAgICAgICAgICAgICAgJ2NhcmQgMDInLFxuICAgICAgICAgICAgICAgICdjYXJkIDAzJyxcbiAgICAgICAgICAgIF07XG4gICAgICAgIH0sXG4gICAgfTtcbn07XG5leHBvcnRzLmRhdGFPYmplY3RPZlNldmVuID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBleHBvcnRzLmRhdGEuZGF0YU9iamVjdGZyb21BUEkgPSBbXG4gICAgICAgICAgICAgICAgJ2NhcmQgMDEnLFxuICAgICAgICAgICAgICAgICdjYXJkIDAyJyxcbiAgICAgICAgICAgICAgICAnY2FyZCAwMycsXG4gICAgICAgICAgICAgICAgJ2NhcmQgMDQnLFxuICAgICAgICAgICAgICAgICdjYXJkIDA1JyxcbiAgICAgICAgICAgICAgICAnY2FyZCAwNicsXG4gICAgICAgICAgICAgICAgJ2NhcmQgMDcnLFxuICAgICAgICAgICAgXTtcbiAgICAgICAgfSxcbiAgICB9O1xufTtcbmV4cG9ydHMuc2Nyb2xsU2Vzc2lvblN0YXJ0ID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9uU2Nyb2xsU2Vzc2lvblN0YXJ0KCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBjb25zb2xlLmxvZygnc2Nyb2xsIHNlc3Npb24gc3RhcnQnKTtcbiAgICAgICAgfSxcbiAgICB9O1xufTtcbmNvbnN0IHNjcm9sbFN0eWxlcyA9IHtcbiAgICB0cmFuc2Zvcm06IGB0cmFuc2xhdGUoMHB4LCAwcHgpYFxufTtcbi8vIFNjcm9sbFByb3BzIFxuY2xhc3MgX2R5bmFtaWNMaXN0IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgICBjb25zdHJ1Y3RvcigpIHtcbiAgICAgICAgLy8gY29uc3RydWN0b3IocHJvcHMpIHtcbiAgICAgICAgLy8gICBzdXBlcihwcm9wcyk7XG4gICAgICAgIC8vICAgdGhpcy5zdGF0ZSAgICAgICAgPSB7XG4gICAgICAgIC8vICAgICBoZWlnaHQ6IDQwMCxcbiAgICAgICAgLy8gICAgIHdpZHRoOiA1MCxcbiAgICAgICAgLy8gICB9IDtcbiAgICAgICAgLy8gICB0aGlzLmhhbmRsZUNoYW5nZSA9IHRoaXMuaGFuZGxlQ2hhbmdlLmJpbmQodGhpcyk7XG4gICAgICAgIC8vIH1cbiAgICAgICAgc3VwZXIoLi4uYXJndW1lbnRzKTtcbiAgICAgICAgdGhpcy5jYXJkQXJyYXkgPSBbXTtcbiAgICAgICAgdGhpcy5zY3JvbGxQcm9wcyA9IHtcbiAgICAgICAgICAgIHdpZHRoOiB0aGlzLnByb3BzLndpZHRoLFxuICAgICAgICAgICAgaGVpZ2h0OiB0aGlzLnByb3BzLmhlaWdodCxcbiAgICAgICAgICAgIG92ZXJmbG93OiAnaGlkZGVuJ1xuICAgICAgICB9O1xuICAgIH1cbiAgICBoYW5kbGVDaGFuZ2UoKSB7XG4gICAgICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgICAgICBjb25zb2xlLmxvZygnaGFuZGxlIGNoYW5nZScpO1xuICAgIH1cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgICAgICBjb25zb2xlLmxvZygncmUtcmVuZGVyIGR5bmFtaWMgbGlzdCcpO1xuICAgICAgICB0aGlzLmNyZWF0ZUNhcmRzKCk7XG4gICAgICAgIC8vIGNvbnNvbGUubG9nKHRoaXMuY2FyZEFycmF5KVxuICAgICAgICAvLyBib3JkZXJXaWR0aD17dGhpcy5wcm9wcy5kYXRhT2JqZWN0ZnJvbUFQSS5sZW5ndGh9XG4gICAgICAgIC8vIGNvbnRlbnRPZmZzZXRZPXt0aGlzLnByb3BzLmRhdGFPYmplY3Rmcm9tQVBJLmxlbmd0aC8xMDAwfVxuICAgICAgICByZXR1cm4gKFJlYWN0LmNyZWF0ZUVsZW1lbnQoZnJhbWVyXzEuU2Nyb2xsLCB7IGJvcmRlckNvbG9yOiAneWVsbG93Jywgd2lkdGg6IHRoaXMucHJvcHMud2lkdGgsIGhlaWdodDogdGhpcy5wcm9wcy5oZWlnaHQsIGNvbnRlbnRPZmZzZXRZOiB0aGlzLnByb3BzLmRhdGFPYmplY3Rmcm9tQVBJLmxlbmd0aCAvIDEwMDAsIG92ZXJmbG93OiAnaGlkZGVuJyB9LFxuICAgICAgICAgICAgUmVhY3QuY3JlYXRlRWxlbWVudChmcmFtZXJfMS5GcmFtZSwgeyBzdHlsZTogc2Nyb2xsU3R5bGVzLCBuYW1lOiAnd3JhcHBlcicsIGhlaWdodDogMTAwICogdGhpcy5wcm9wcy5kYXRhT2JqZWN0ZnJvbUFQSS5sZW5ndGgsIHdpZHRoOiAzMDAgfSxcbiAgICAgICAgICAgICAgICBSZWFjdC5jcmVhdGVFbGVtZW50KGZyYW1lcl8xLlN0YWNrLCB7IHdpZHRoOiAnMTAwJScsIGhlaWdodDogJzEwMCUnLCBkaXN0cmlidXRpb246ICdzdGFydCcsIGFsaWduOiAnY2VudGVyJywgZGlyZWN0aW9uOiAndmVydGljYWwnLCBnYXA6IDAsIHBhZGRpbmc6IDAgfSwgdGhpcy5jYXJkQXJyYXkpKSkpO1xuICAgIH1cbiAgICBjcmVhdGVDYXJkcygpIHtcbiAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgIHZhciBzdGFydGVyQ29sb3IgPSBmcmFtZXJfMS5Db2xvcignIzU1Q0NGRicpO1xuICAgICAgICB0aGlzLmNhcmRBcnJheSA9IFtdO1xuICAgICAgICBmb3IgKGxldCBpbmRleCA9IDA7IGluZGV4IDwgdGhpcy5wcm9wcy5kYXRhT2JqZWN0ZnJvbUFQSS5sZW5ndGg7IGluZGV4KyspIHtcbiAgICAgICAgICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgICAgICAgICAgY29uc3QgZWxlbWVudCA9IHRoaXMucHJvcHMuZGF0YU9iamVjdGZyb21BUElbaW5kZXhdO1xuICAgICAgICAgICAgY29uc3QgbmV3Q29sb3IgPSBmcmFtZXJfMS5Db2xvci5kYXJrZW4oc3RhcnRlckNvbG9yLCA2ICogaW5kZXgpO1xuICAgICAgICAgICAgdGhpcy5jYXJkQXJyYXkucHVzaChSZWFjdC5jcmVhdGVFbGVtZW50KGNhbnZhc18xLk1fY2FyZCwgeyBiYWNrZ3JvdW5kOiBuZXdDb2xvciwgQ2FyZF9UZXh0OiBlbGVtZW50LCBoZWlnaHQ6IDEwMCwgd2lkdGg6IDMwMCwga2V5OiAnY2FyZCcgKyBpbmRleCB9KSk7XG4gICAgICAgIH1cbiAgICB9XG4gICAgY29tcG9uZW50RGlkTW91bnQoKSB7XG4gICAgICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgICAgICBjb25zb2xlLmxvZygnbW91bnQnKTtcbiAgICB9XG4gICAgY29tcG9uZW50V2lsbFVubW91bnQoKSB7XG4gICAgICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgICAgICBjb25zb2xlLmxvZygndW5tb3VudCcpO1xuICAgIH1cbn1cbl9keW5hbWljTGlzdC5kZWZhdWx0UHJvcHMgPSB7XG4gICAgZGF0YU9iamVjdGZyb21BUEk6IGV4cG9ydHMuZGF0YS5kYXRhT2JqZWN0ZnJvbUFQSSxcbiAgICAvLyBoZWlnaHQ6ICgxMDAgKiBkYXRhLmRhdGFPYmplY3Rmcm9tQVBJLmxlbmd0aCksXG4gICAgaGVpZ2h0OiBleHBvcnRzLmRhdGEuY2FyZGhlaWdodCxcbiAgICB3aWR0aDogMzAwLFxufTtcbi8vIEFkZCBGcmFtZXIgVUkgZm9yIHRoaXMgY29tcG9uZW50IChpbiB0aGUgcHJvcGVydGllcyBwYW5lbClcbi8vIGh0dHBzOi8vZnJhbWVyLmNvbS9sZWFybi9kb2NzL2NvbXBvbmVudHMjY29kZVxuX2R5bmFtaWNMaXN0LnByb3BlcnR5Q29udHJvbHMgPSB7XG4vLyB0ZXh0OiB7IHR5cGU6IENvbnRyb2xUeXBlLlN0cmluZywgdGl0bGU6IFwiVGV4dFwiIH0sXG59O1xuZXhwb3J0cy5fZHluYW1pY0xpc3QgPSBfZHluYW1pY0xpc3Q7XG5leHBvcnRzLl9faW5mb19fID0gW3sgbmFtZTogXCJ1cGRhdGVOdW1PZkNhcmRzXCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9LCB7IG5hbWU6IFwiZGF0YU9iamVjdE9mT25lXCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9LCB7IG5hbWU6IFwiZGF0YU9iamVjdE9mVGhyZWVcIiwgdHlwZTogXCJvdmVycmlkZVwiIH0sIHsgbmFtZTogXCJkYXRhT2JqZWN0T2ZTZXZlblwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcInNjcm9sbFNlc3Npb25TdGFydFwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcIl9keW5hbWljTGlzdFwiLCBjaGlsZHJlbjogZmFsc2UsIHR5cGU6IFwiY29tcG9uZW50XCIgfV07XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./code/dynamicList.tsx\n");
+
+/***/ }),
+
+/***/ "./package.js":
+/*!********************!*\
+  !*** ./package.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// The template for the dynamic webpack entry. Be aware of the variables
+
+const packageJson = __webpack_require__(/*! ./package.json */ "./package.json")
+
+const package = {
+    packageJson,
+    sourceModules: {},
+    dependencies: {},
+}
+
+// This is a special webpack thing that watches the whole directory
+// https://github.com/webpack/docs/wiki/context
+const ctx = __webpack_require__("./code sync recursive \\.(t|j)s(x?)|\\.css$")
+
+ctx.keys().forEach(key => {
+    package.sourceModules[key] = () => ctx(key)
+})
+
+// The packages are passed in through a template
+const packages = {}
+
+                packages["framer"] = () => {
+                    var package = {}
+                    try {
+                        package = __webpack_require__(/*! framer */ "framer")
+                    } catch (e) {
+                        console.log(e)
+                    }
+                    package.__framer__ = package.__framer__ || {}
+                    package.__framer__.packageJson = {"name":"framer","version":"0.10.6","main":"build/framer.js","author":"Framer","license":"MIT","scripts":{"coverage":"jest --config jest.json --coverage","test":"jest --config jest.json","watch":"jest --config jest.json --watch"},"devDependencies":{"@microsoft/api-documenter":"^1.5.47","@microsoft/api-extractor":"^7","@types/chalk":"^2.2.0","@types/draft-js":"0.10.19","@types/enzyme":"^3.1.10","@types/enzyme-adapter-react-16":"^1.0.3","@types/hsluv":"https://github.com/framer/typed_hsluv#bump","@types/jest":"^23.0.0","@types/jest-diff":"^20.0.0","@types/jest-matcher-utils":"^21.0.1","@types/node":"^9.6.0","@types/react":"^16","@types/react-dom":"^16","cache-loader":"^1.2.2","chalk":"^2.4.1","convert-tsconfig-paths-to-webpack-aliases":"^0.9.2","css.escape":"^1.5.1","draft-js":"0.10.4","enzyme":"^3.3.0","enzyme-adapter-react-16":"^1.1.1","eventemitter3":"^3.1.0","fork-ts-checker-webpack-plugin":"^0.4.1","hoist-non-react-statics":"^2.5.0","hsluv":"^0.0.3","immutable":"^3.8.2","jest":"^23.1.0","jest-diff":"^23.6.0","jest-junit":"^5.2.0","progress-bar-webpack-plugin":"^1.11.0","raf":"^3.4.0","react":"~16.4","react-dev-utils":"^5.0.1","react-dom":"~16.4","semver":"^5.6.0","ts-jest":"^23.10.5","ts-loader":"^4.1.0","typescript":"^3.0.1","watch":"^1.0.2","webpack":"^4.4.1","webpack-cli":"^3.1.2","webpack-dev-server":"^3.1.10","xcssmatrix":"^0.2.2"},"peerDependencies":{"react":"^16.3","react-dom":"^16.3"},"tsdoc":{"tsdocFlavor":"AEDoc"},"framer":{"components":[{"name":"Scroll","children":true,"properties":[{"key":"direction","title":"Direction","kind":"enum","options":["horizontal","vertical","both"]}]},{"name":"Page"},{"name":"Stack"},{"name":"FramerAppleWatch38","type":"device"},{"name":"FramerAppleWatch42","type":"device"},{"name":"FramerSonySmartWatch","type":"device"},{"name":"FramerAppleIPhoneSE","type":"device"},{"name":"FramerAppleIPhone8","type":"device"},{"name":"FramerAppleIPhone8Plus","type":"device"},{"name":"FramerAppleIPhoneXS","type":"device"},{"name":"FramerAppleIPhoneXR","type":"device"},{"name":"FramerAppleIPhoneXSMax","type":"device"},{"name":"FramerGooglePixel2","type":"device"},{"name":"FramerGooglePixel2XL","type":"device"},{"name":"FramerGooglePixel3","type":"device"},{"name":"FramerGooglePixel3XL","type":"device"},{"name":"FramerSamsungNote5","type":"device"},{"name":"FramerSamsungGalaxyS9","type":"device"},{"name":"FramerAppleIPadAir","type":"device"},{"name":"FramerAppleIPadMini","type":"device"},{"name":"FramerAppleIPadPro","type":"device"},{"name":"FramerGoogleNexusTablet","type":"device"},{"name":"FramerMicrosoftSurfacePro3","type":"device"},{"name":"FramerMicrosoftSurfacePro4","type":"device"},{"name":"FramerAppleIMac","type":"device"},{"name":"FramerAppleThunderboltDisplay","type":"device"},{"name":"FramerAppleMacBook","type":"device"},{"name":"FramerAppleMacBookAir","type":"device"},{"name":"FramerAppleMacBookPro","type":"device"},{"name":"FramerDellXPS","type":"device"},{"name":"FramerMicrosoftSurfaceBook","type":"device"},{"name":"FramerSonyW850C","type":"device"},{"name":"FramerStoreArtwork","type":"device"},{"name":"FramerStoreIcon","type":"device"}]}}
+                    return package
+                }
+
+package.dependencies = packages
+
+exports.__framer__ = package
+
+
+/***/ }),
+
+/***/ "./package.json":
+/*!**********************!*\
+  !*** ./package.json ***!
+  \**********************/
+/*! exports provided: main, license, devDependencies, peerDependencies, framer, author, default */
+/***/ (function(module) {
+
+module.exports = {"main":"dist/index.js","license":"MIT","devDependencies":{"@types/react":"^16.4.16"},"peerDependencies":{"framer":"^0.10","react":"^16.3.0","react-dom":"^16.3.0"},"framer":{"id":"efe40980-3fab-4b43-bbe6-b5d5e3f42f72"},"author":"Alexander Bennett"};
+
+/***/ }),
+
+/***/ "framer":
+/*!******************************************************************************************!*\
+  !*** external {"root":"Framer","commonjs2":"framer","commonjs":"framer","amd":"framer"} ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_framer__;
+
+/***/ }),
+
+/***/ "react":
+/*!**************************************************************************************!*\
+  !*** external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"} ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_react__;
+
+/***/ })
+
+/******/ });
+});
+        </script>
+        
+        <script>
+        const data = {
+  "presentationNode": {
+    "componentClass": "Frame",
+    "props": {
+      "key": "Uuq5VkRRn",
+      "id": "id_Uuq5VkRRn",
+      "willChangeTransform": false,
+      "opacity": 1,
+      "radius": 0,
+      "rotation": 0,
+      "visible": true,
+      "overflow": "hidden",
+      "background": {
+        "r": 51,
+        "g": 51,
+        "b": 51,
+        "a": 1,
+        "h": 0,
+        "s": 0,
+        "l": 0.2,
+        "initialValue": "#333333",
+        "roundA": 1,
+        "format": "rgb"
+      },
+      "left": 935,
+      "right": null,
+      "top": 0,
+      "bottom": null,
+      "width": 864,
+      "height": 724,
+      "aspectRatio": null,
+      "centerX": "0%",
+      "centerY": "0%",
+      "parentSize": null
+    },
+    "children": [
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "hLd3jTdvE",
+          "id": "id_hLd3jTdvE",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 30,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 187,
+            "g": 187,
+            "b": 187,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7333333333333333,
+            "initialValue": "#BBBBBB",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "left": 106,
+          "right": null,
+          "top": null,
+          "bottom": 271,
+          "width": 186,
+          "height": 59,
+          "aspectRatio": null,
+          "centerX": "23.03240740740741%",
+          "centerY": "58.49447513812155%",
+          "parentSize": null
+        },
+        "children": [
+          {
+            "componentClass": "Text",
+            "props": {
+              "key": "s5dbgPQnG",
+              "id": "id_s5dbgPQnG",
+              "willChangeTransform": false,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "autoSize": true,
+              "size": {
+                "height": 19,
+                "width": 95
+              },
+              "rawHTML": "<div class='DraftEditor-alignCenter'><div data-offset-key=\"6tn7k-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"6tn7k-0-0\" style=\"tab-size:4;font-weight:400;font-family:&quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:16px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">7 items in list</span></span></div></div>",
+              "alignment": "center",
+              "left": null,
+              "right": null,
+              "top": null,
+              "bottom": null,
+              "width": 95,
+              "height": 19,
+              "aspectRatio": null,
+              "centerX": "49.73118279569893%",
+              "centerY": "50%",
+              "parentSize": null
+            }
+          }
+        ],
+        "codeOverrideIdentifier": "./dynamicList.tsx_dataObjectOfSeven"
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "U5psFSGZh",
+          "id": "id_U5psFSGZh",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 30,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 187,
+            "g": 187,
+            "b": 187,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7333333333333333,
+            "initialValue": "#BBBBBB",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "left": 106,
+          "right": null,
+          "top": 325,
+          "bottom": null,
+          "width": 186,
+          "height": 59,
+          "aspectRatio": null,
+          "centerX": "23.03240740740741%",
+          "centerY": "48.96408839779006%",
+          "parentSize": null
+        },
+        "children": [
+          {
+            "componentClass": "Text",
+            "props": {
+              "key": "GT8T1vn2v",
+              "id": "id_GT8T1vn2v",
+              "willChangeTransform": false,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "autoSize": true,
+              "size": {
+                "height": 19,
+                "width": 95
+              },
+              "rawHTML": "<div class='DraftEditor-alignCenter'><div data-offset-key=\"6tn7k-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"6tn7k-0-0\" style=\"tab-size:4;font-weight:400;font-family:&quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:16px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">3 items in list</span></span></div></div>",
+              "alignment": "center",
+              "left": null,
+              "right": null,
+              "top": null,
+              "bottom": null,
+              "width": 95,
+              "height": 19,
+              "aspectRatio": null,
+              "centerX": "49.73118279569893%",
+              "centerY": "50%",
+              "parentSize": null
+            }
+          }
+        ],
+        "codeOverrideIdentifier": "./dynamicList.tsx_dataObjectOfThree"
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "JnkiRg_Hs",
+          "id": "id_JnkiRg_Hs",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 30,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 187,
+            "g": 187,
+            "b": 187,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7333333333333333,
+            "initialValue": "#BBBBBB",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "left": 106,
+          "right": null,
+          "top": 256,
+          "bottom": null,
+          "width": 186,
+          "height": 59,
+          "aspectRatio": null,
+          "centerX": "23.03240740740741%",
+          "centerY": "39.43370165745856%",
+          "parentSize": null
+        },
+        "children": [
+          {
+            "componentClass": "Text",
+            "props": {
+              "key": "hglT7w3rh",
+              "id": "id_hglT7w3rh",
+              "willChangeTransform": false,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "autoSize": true,
+              "size": {
+                "height": 19,
+                "width": 87
+              },
+              "rawHTML": "<div class='DraftEditor-alignCenter'><div data-offset-key=\"6tn7k-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"6tn7k-0-0\" style=\"tab-size:4;font-weight:400;font-family:&quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:16px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">1 item in list</span></span></div></div>",
+              "alignment": "center",
+              "left": null,
+              "right": null,
+              "top": null,
+              "bottom": null,
+              "width": 87,
+              "height": 19,
+              "aspectRatio": null,
+              "centerX": "49.73118279569893%",
+              "centerY": "50%",
+              "parentSize": null
+            }
+          }
+        ],
+        "codeOverrideIdentifier": "./dynamicList.tsx_dataObjectOfOne"
+      },
+      {
+        "componentClass": "ComponentContainer",
+        "props": {
+          "key": "RJlUoIIVY",
+          "id": "id_RJlUoIIVY",
+          "willChangeTransform": false,
+          "rotation": 0,
+          "opacity": 1,
+          "componentIdentifier": "./dynamicList.tsx__dynamicList",
+          "visible": true,
+          "left": null,
+          "right": 143,
+          "top": 162,
+          "bottom": null,
+          "width": 300,
+          "height": 153,
+          "aspectRatio": null,
+          "centerX": "66.08796296296296%",
+          "centerY": "32.94198895027624%",
+          "parentSize": null
+        },
+        "children": [
+          {
+            "componentClass": "./dynamicList.tsx__dynamicList",
+            "props": {
+              "placeholders": null,
+              "id": "RJlUoIIVY./dynamicList.tsx__dynamicList",
+              "key": "RJlUoIIVY./dynamicList.tsx__dynamicList"
+            },
+            "children": []
+          }
+        ],
+        "codeOverrideIdentifier": "./dynamicList.tsx_updateNumOfCards"
+      }
+    ]
+  },
+  "metadata": {
+    "name": "Frame",
+    "id": "Uuq5VkRRn",
+    "width": 864,
+    "height": 724,
+    "settings": {
+      "zoom": -1,
+      "rotate": false,
+      "bezel": false,
+      "responsive": false,
+      "touch": true,
+      "__class": "PreviewSettings"
+    }
+  },
+  "navigation": {}
+};
+        const $build_index_js = document.querySelector("#build_index_js")
+        const script = $build_index_js ? $build_index_js.textContent.trim() : ""
+        
+        // need react to have rendered, before we can do setPreviewData
+        setTimeout(() => {
+            if (script.length > 0) {
+                setPreviewData(script, data)
+            } else {
+                fetch("build/index.js").then((response) => {
+                    return response.text().then((script) => {
+                        setPreviewData(script, data)
+                    })
+                })
+            }
+        }, 0)
+        </script>
+    </body>
+</html>
