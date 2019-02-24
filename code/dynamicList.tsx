@@ -1,5 +1,5 @@
 import * as React from "react";
-import { PropertyControls, ControlType, Frame, Stack, Data, Animatable, Override, Color, Scroll } from "framer";
+import {Frame, Stack, Data, Animatable, Override, Color, Scroll } from "framer";
 
 import {M_card} from "./canvas"
 
@@ -17,18 +17,12 @@ export const data = Data({
 
 
 export const updateNumOfCards: Override = () => {
-  // console.log(data.dataObjectfromAPI)
-  // now try passing the new height
-  // console.log(data.cardheight)
   console.log(100 * data.dataObjectfromAPI.length)
 
   let newHeight = 100 * data.dataObjectfromAPI.length
 
   return {
     dataObjectfromAPI: data.dataObjectfromAPI,
-    transform: `translate(0px, 0px)` ,
-    // height: data.cardheight
-    // height: newHeight
   }
 }
 
@@ -77,21 +71,6 @@ export const dataObjectOfSeven: Override = () => {
 
 
 
-export const scrollSessionStart: Override = () => {
-  return {
-    onScrollSessionStart() {
-        console.log('scroll session start')
-      },
-  }
-}
-
-
-
-const scrollStyles = { 
-  transform: `translate(0px, 0px)` 
-};
-
-
 
 type Props = { 
   dataObjectfromAPI: Array<string>,
@@ -100,33 +79,10 @@ type Props = {
 };
 
 
-// ScrollProps 
-
 export class _dynamicList extends React.Component<Props> {
-  // constructor(props) {
-  //   super(props);
-  //   this.state        = {
-  //     height: 400,
-  //     width: 50,
-  //   } ;
-  //   this.handleChange = this.handleChange.bind(this);
-  // }
-
-
-  
-
-  handleChange() {
-    console.log('handle change')
-  }
-
 
   cardArray = []
 
-scrollProps = {
-  width:this.props.width,
-  height:this.props.height,
-  overflow:'hidden'
-}
 
 
   render() {
@@ -134,16 +90,17 @@ scrollProps = {
     this.createCards()
 
 
-    // console.log(this.cardArray)
-    // borderWidth={this.props.dataObjectfromAPI.length}
-
-
-    // contentOffsetY={this.props.dataObjectfromAPI.length/1000}
-
     return (
-    <Scroll borderColor={'yellow'}  width={this.props.width} height={this.props.height} contentOffsetY={this.props.dataObjectfromAPI.length/1000}  overflow={'hidden'}
-    >
-        <Frame style={scrollStyles} name={'wrapper'} height={100* this.props.dataObjectfromAPI.length} width={300}>
+    <Scroll
+        width={this.props.width}
+        height={this.props.height}
+
+        // THIS ALLOWS THE SCROLL VIEW TO JUMP BACK TO TOP ON CHANGE,
+        // HAS TO BE NEW NUMBER OR REACT WON'T PASS IT
+        contentOffsetY={this.props.dataObjectfromAPI.length/1000}  
+        overflow={'hidden'}
+      >
+        <Frame name={'wrapper'} height={100* this.props.dataObjectfromAPI.length} width={300} top={0}>
             <Stack width={'100%'} height={'100%'} distribution={'start'} align={'center'} direction={'vertical'} gap={0} padding={0}>
                 {this.cardArray}
             </Stack>
@@ -169,31 +126,10 @@ scrollProps = {
     }
 
 
-    componentDidMount() {
-      console.log('mount')
-      // this.setState({
-      //   styles: {
-      //     top: computeTopWith(this.refs.child),
-      //     left: computeLeftWith(this.refs.child)
-      //   }
-      // })
-    },
-    
-    componentWillUnmount(){
-      console.log('unmount')
-    }
-
 
   static defaultProps: Props = {
     dataObjectfromAPI: data.dataObjectfromAPI,
-    // height: (100 * data.dataObjectfromAPI.length),
     height: data.cardheight,
     width: 300,
-  };
-
-  // Add Framer UI for this component (in the properties panel)
-  // https://framer.com/learn/docs/components#code
-  static propertyControls: PropertyControls<Props> = {
-    // text: { type: ControlType.String, title: "Text" },
   };
 }
